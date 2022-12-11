@@ -12,4 +12,19 @@
    Check how it looks by adding [background-color: red;] */
   max-width: 1024px;
   color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.navButton {
+  margin-left: 20px;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  color: #003580;
 }
