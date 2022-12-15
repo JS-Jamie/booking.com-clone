@@ -1,0 +1,47 @@
+.lp {
+  width: 100%;
+  max-width: 1024px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.lpItem {
+  flex: 1;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.lpImg {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.lpName {
+  font-weight: bold;
+}
+
+.lpCity {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.lpPrice {
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.lpRating > button {
+  background-color: #003580;
+  color: white;
+  border: none;
+  border-radius: 4px 4px 4px 0px;
+  padding: 3px;
+  margin-right: 10px;
+  font-weight: bold;
+}
+
+.lpRating > span {
+  font-size: 12px;
+}
