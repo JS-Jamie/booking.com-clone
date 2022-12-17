@@ -5,6 +5,7 @@ import { useLocation } from 'react-router-dom';
 import { format } from 'date-fns'; // transforms js date to readable strings
 import { useState } from 'react';
 import { DateRange } from 'react-date-range';
+import SearchItem from '../../components/searchItem/SearchItem';
 
 const List = () => {
   const location = useLocation();
@@ -40,8 +41,69 @@ const List = () => {
                 />
               )}
             </div>
+            <div className='lsItem'>
+              <label>Options</label>
+              <div className='lsOptions'>
+                <div className='lsOptionItem'>
+                  <span className='lsOptionText'>
+                    Min price <small>per night</small>
+                  </span>
+                  <input type='number' className='lsOptionInput' />
+                </div>
+
+                <div className='lsOptionItem'>
+                  <span className='lsOptionText'>
+                    Max price <small>per night</small>
+                  </span>
+                  <input type='number' className='lsOptionInput' />
+                </div>
+
+                <div className='lsOptionItem'>
+                  <span className='lsOptionText'>Adult</span>
+                  <input
+                    type='number'
+                    min={1}
+                    className='lsOptionInput'
+                    placeholder={options.adult}
+                  />
+                </div>
+
+                <div className='lsOptionItem'>
+                  <span className='lsOptionText'>Children</span>
+                  <input
+                    type='number'
+                    min={0}
+                    className='lsOptionInput'
+                    placeholder={options.children}
+                  />
+                </div>
+
+                <div className='lsOptionItem'>
+                  <span className='lsOptionText'>Room</span>
+                  <input
+                    type='number'
+                    min={1}
+                    className='lsOptionInput'
+                    placeholder={options.room}
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button>Search</button>
           </div>
-          <div className='listResult'></div>
+          <div className='listResult'>
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+            <SearchItem />
+          </div>
         </div>
       </div>
     </div>
