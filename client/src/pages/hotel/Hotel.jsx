@@ -9,13 +9,19 @@ const Hotel = () => {
     <div>
       <Navbar />
       <Header type='list' />
-      <div>
-        <div>
-          <h1></h1>
-          <div>
+      <div className='hotelContainer'>
+        <div className='hotelWrapper'>
+          <h1 className='hotelTitle'>Grand Hotel</h1>
+          <div className='hotelAddress'>
             <FontAwesomeIcon icon={faLocationDot} />
             <span>Elton St 125 New York</span>
           </div>
+          <span className='hotelDistance'>
+            Excellent location - 500m from center
+          </span>
+          <span hotelPriceHighlight>
+            Book a stay over $114 at this property and get a free airport taxi
+          </span>
         </div>
       </div>
     </div>
