@@ -1,16 +1,12 @@
 import './searchItem.css';
 
-const SearchItem = () => {
+const SearchItem = ({ item }) => {
   return (
     <div className='searchItem'>
-      <img
-        className='siImg'
-        src='https://cf.bstatic.com/xdata/images/hotel/square600/195698719.webp?k=49feff23c8a2097649f305651a1a7cbdd60bbc098a41c4cbdfb7bd1f7cee9d3e&o=&s=1'
-        alt=''
-      />
+      <img className='siImg' src={item.photos[0]} alt='' />
       <div className='siDesc'>
-        <h1 className='siTitle'>Hyatt Regency San Francisco Downtown SOMA</h1>
-        <span className='siDistance'>0.3 miles from center</span>
+        <h1 className='siTitle'>{item.name}</h1>
+        <span className='siDistance'>{item.distance}m from center</span>
         <span className='siTaxiOp'>Subway Access</span>
         <span className='siSubtitle'>
           King Room with Shower - Mobility Accessible
