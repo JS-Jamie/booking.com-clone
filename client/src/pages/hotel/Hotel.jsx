@@ -13,7 +13,7 @@ import Footer from '../../components/footer/Footer';
 import { useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
-import { SearchContext } from '../../context/searchContext';
+import { SearchContext } from '../../context/SearchContext';
 
 const Hotel = () => {
   const location = useLocation();
