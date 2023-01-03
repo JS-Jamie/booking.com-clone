@@ -6,7 +6,6 @@ const Featured = () => {
     '/hotels/countByCity?cities=Dublin,Truckee,South Lake Tahoe'
   );
 
-  console.log(data);
   return (
     <div className='featured'>
       {loading ? (

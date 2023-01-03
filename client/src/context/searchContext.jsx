@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext, useReducer } from 'react';
 
 const INITIAL_STATE = {
   city: undefined,

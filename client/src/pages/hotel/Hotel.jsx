@@ -10,9 +10,10 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import MailList from '../../components/mailList/MailList';
 import Footer from '../../components/footer/Footer';
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import useFetch from '../../hooks/useFetch';
+import { SearchContext } from '../../context/searchContext';
 
 const Hotel = () => {
   const location = useLocation();
@@ -22,6 +23,17 @@ const Hotel = () => {
   const [open, setOpen] = useState(false);
 
   const { data, loading, error } = useFetch(`/hotels/find/${id}`);
+
+  const { dates, options } = useContext(SearchContext);
+
+  const MILLISECONDS_PER_DAY = 1000 * 60 * 60 * 24;
+  function dayDifference(date1, date2) {
+    const timeDiff = Math.abs(date2.getTime() - date1.getTime());
+    const diffDays = Math.ceil(timeDiff / MILLISECONDS_PER_DAY);
+    return diffDays;
+  }
+
+  const days = dayDifference(dates[0].endDate, dates[0].startDate);
 
   // const photos = [
   //   {
@@ -126,13 +138,14 @@ const Hotel = () => {
                 <p className='hotelDesc'>{data.desc}</p>
               </div>
               <div className='hotelDetailsPrice'>
-                <h1>Perfect for a 3-night stay!</h1>
+                <h1>Perfect for a {days}-night stay!</h1>
                 <span>
                   Located in the heart of San Francisco, this property has an
                   excellent location score of 9.8!
                 </span>
                 <h2>
-                  <b>$685</b> (3 nights)
+                  <b>${days * data.cheapestPrice * options.room}</b> ({days}{' '}
+                  nights)
                 </h2>
                 <button>Reserve or Book Now!</button>
               </div>
