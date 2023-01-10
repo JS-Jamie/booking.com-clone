@@ -4,25 +4,52 @@
   flex-direction: column;
   align-items: center;
   gap: 10px;
-  margin-top: 400px;
+  margin-top: 50px;
+}
+
+.emailSection {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .lInput {
   height: 30px;
   padding: 10px;
+  width: 40vh;
 }
 
 .lButton {
   border: none;
   padding: 10px 20px;
-  background-color: #0071c2;
+  background-color: #006ce4;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
+  width: 40vh;
 }
 
 .lButton:disabled {
   background-color: #0071c28c;
   cursor: not-allowed;
+}
+
+.divider {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  width: max-content;
+  margin: 16px 0;
+}
+
+hr {
+  display: block;
+  width: 100%;
+}
+
+.dividerText {
+  margin: 0 8px 2px;
+  white-space: nowrap;
 }
