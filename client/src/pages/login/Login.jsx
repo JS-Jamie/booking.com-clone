@@ -34,17 +34,17 @@ const Login = () => {
   return (
     <div>
       <Navbar />
-
       <div className='login'>
-        <div className='emailSection'>
-          <h3>Username</h3>
+        <div className='loginSection'>
+          <h1 className='logInTitle'> Sign In</h1>
+          <h3 className='username'>Username</h3>
           <input
             type='text'
             id='username'
             onChange={handleChange}
             className='lInput'
           />
-          <h3>Password</h3>
+          <h3 className='password'>Password</h3>
           <input
             type='password'
             id='password'
@@ -56,13 +56,13 @@ const Login = () => {
           </button>
           {error && <span>{error.message}</span>}
         </div>
-        <div className='accessPanel'>
-          <div className='divider'>
-            <hr></hr>
-            <span className='dividerText'>Haven't registered yet?</span>
-            {/* <link> Register Here </link> */}
-            <hr></hr>
-          </div>
+        <div className='register'>
+          <span className='registerText'>
+            Haven't registered yet?{' '}
+            <a href='/register' className='registerHere'>
+              Register Here
+            </a>
+          </span>
         </div>
       </div>
     </div>

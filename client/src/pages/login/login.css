@@ -1,34 +1,53 @@
 .login {
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
   gap: 10px;
   margin-top: 50px;
+  width: 100%;
 }
 
-.emailSection {
+.loginSection {
   display: flex;
-  align-items: center;
   flex-direction: column;
+}
+
+.logInTitle {
+  margin-bottom: 20px;
+}
+.username {
+  justify-content: flex-start;
+  font-weight: 500;
   width: 100%;
+  margin-bottom: 4px;
+}
+
+.password {
+  justify-content: flex-start;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 4px;
 }
 
 .lInput {
   height: 30px;
-  padding: 10px;
+  padding: 5px;
+  margin: 4px;
   width: 40vh;
+  border-radius: 5px;
 }
 
 .lButton {
   border: none;
-  padding: 10px 20px;
+  padding: 15px 20px;
   background-color: #006ce4;
   color: white;
   font-weight: bold;
   cursor: pointer;
   border-radius: 5px;
-  width: 40vh;
+  width: 42vh;
+  margin-top: 15px;
+  font-size: 20px;
 }
 
 .lButton:disabled {
@@ -36,7 +55,7 @@
   cursor: not-allowed;
 }
 
-.divider {
+.register {
   align-items: center;
   display: flex;
   flex-direction: row;
@@ -44,12 +63,13 @@
   margin: 16px 0;
 }
 
-hr {
-  display: block;
-  width: 100%;
-}
-
-.dividerText {
+.registerText {
   margin: 0 8px 2px;
   white-space: nowrap;
+}
+
+.registerHere {
+  white-space: nowrap;
+  color: blue;
+  text-decoration: none;
 }

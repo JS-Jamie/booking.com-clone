@@ -1,0 +1,54 @@
+.registration {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+}
+
+.registrationTitle {
+  margin-bottom: 20px;
+}
+
+.infoText {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.rInput {
+  height: 30px;
+  padding: 5px;
+  margin: 4px;
+  width: 40vh;
+  border-radius: 5px;
+}
+
+.registerButton {
+  border: none;
+  padding: 15px 20px;
+  background-color: #006ce4;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 42vh;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.registerButton:disabled {
+  background-color: #0071c28c;
+  cursor: not-allowed;
+}
+
+.signInHere {
+  color: blue;
+  text-decoration: none;
+}
