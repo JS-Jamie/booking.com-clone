@@ -37,23 +37,30 @@ const Login = () => {
 
       <div className='login'>
         <div className='emailSection'>
-          <h1>Sign in or create an account</h1>
-          <h3>Email address</h3>
+          <h3>Username</h3>
           <input
             type='text'
             id='username'
             onChange={handleChange}
             className='lInput'
           />
+          <h3>Password</h3>
+          <input
+            type='password'
+            id='password'
+            onChange={handleChange}
+            className='lInput'
+          />
           <button disabled={loading} onClick={handleClick} className='lButton'>
-            Continue with email
+            Sign in
           </button>
           {error && <span>{error.message}</span>}
         </div>
         <div className='accessPanel'>
           <div className='divider'>
             <hr></hr>
-            <span className='dividerText'>or use one of these options</span>
+            <span className='dividerText'>Haven't registered yet?</span>
+            {/* <link> Register Here </link> */}
             <hr></hr>
           </div>
         </div>
