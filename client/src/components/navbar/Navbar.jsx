@@ -7,6 +7,8 @@ const Navbar = () => {
   const { user } = useContext(AuthContext);
   const [openModal, setOpenModal] = useState(false);
 
+  const { loading, error, dispatch } = useContext(AuthContext);
+
   const navigate = useNavigate();
 
   const handleRegister = (e) => {
@@ -25,6 +27,11 @@ const Navbar = () => {
     }
   };
 
+  const handleLogOut = (e) => {
+    e.preventDefault();
+    dispatch({ type: 'LOGOUT' });
+  };
+
   return (
     <div className='navbar'>
       <div className='navContainer'>
@@ -32,7 +39,10 @@ const Navbar = () => {
           <span className='logo'>eBooking.com</span>
         </Link>
         {user ? (
-          user.username
+          <div>
+            {user.username}
+            <button onClick={handleLogOut}>Logout</button>
+          </div>
         ) : (
           <div className='navItems'>
             <button onClick={handleRegister} className='navButton'>

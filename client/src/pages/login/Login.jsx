@@ -1,8 +1,8 @@
 import { useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../context/AuthContext';
-import './login.css';
 import axios from 'axios';
+import './login.css';
 import Navbar from '../../components/navbar/Navbar';
 
 const Login = () => {
