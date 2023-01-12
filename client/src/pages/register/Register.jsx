@@ -16,6 +16,8 @@ const Register = () => {
   const { loading, error, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
+  const isAuthPage = true;
+
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -39,7 +41,7 @@ const Register = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar isAuthPage={isAuthPage} />
       <div className='registration'>
         <div className='info'>
           <h1 className='registrationTitle'>Create Your Account</h1>

@@ -16,7 +16,7 @@ const LovedProperties = () => {
               <span className='lpName'>{item.name}</span>
               <span className='lpCity'>{item.city}</span>
               <span className='lpPrice'>
-                Starting from {item.cheapestPrice}
+                Starting from ${item.cheapestPrice}
               </span>
               {item.rating && (
                 <div className='lpRating'>

@@ -15,6 +15,8 @@ const Login = () => {
 
   const navigate = useNavigate();
 
+  const isAuthPage = true;
+
   const handleChange = (e) => {
     setCredentials((prev) => ({ ...prev, [e.target.id]: e.target.value }));
   };
@@ -33,7 +35,7 @@ const Login = () => {
 
   return (
     <div>
-      <Navbar />
+      <Navbar isAuthPage={isAuthPage} />
       <div className='login'>
         <div className='loginSection'>
           <h1 className='logInTitle'> Sign In</h1>
