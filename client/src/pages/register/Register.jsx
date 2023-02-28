@@ -6,6 +6,7 @@ import { AuthContext } from '../../context/AuthContext';
 import './register.css';
 
 const Register = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [credentials, setCredentials] = useState({
     username: undefined,
     email: undefined,
@@ -13,7 +14,7 @@ const Register = () => {
     confirmPassword: undefined,
   });
 
-  const { loading, error, dispatch } = useContext(AuthContext);
+  const { user, loading, error, dispatch } = useContext(AuthContext);
   const navigate = useNavigate();
 
   const isAuthPage = true;
@@ -36,6 +37,14 @@ const Register = () => {
       navigate('/');
     } catch (err) {
       dispatch({ type: 'REGISTER_FAIL', payload: err.response.data });
+    }
+  };
+
+  const handleLogIn = (e) => {
+    if (user) {
+      setOpenModal(true);
+    } else {
+      navigate('/login');
     }
   };
 
@@ -80,7 +89,7 @@ const Register = () => {
         <div className='logIn'>
           <span>
             Already have an account?{' '}
-            <a href='/login' className='signInHere'>
+            <a onClick={handleLogIn} className='signInHere'>
               {' '}
               Sign in here
             </a>
