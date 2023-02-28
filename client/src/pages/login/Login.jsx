@@ -6,12 +6,13 @@ import './login.css';
 import Navbar from '../../components/navbar/Navbar';
 
 const Login = () => {
+  const [openModal, setOpenModal] = useState(false);
   const [credentials, setCredentials] = useState({
     username: undefined,
     password: undefined,
   });
 
-  const { loading, error, dispatch } = useContext(AuthContext);
+  const { user, loading, error, dispatch } = useContext(AuthContext);
 
   const navigate = useNavigate();
 
@@ -30,6 +31,14 @@ const Login = () => {
       navigate('/');
     } catch (error) {
       dispatch({ type: 'LOGIN_FAILURE', payload: error.response.data });
+    }
+  };
+
+  const handleRegister = (e) => {
+    if (user) {
+      setOpenModal(true);
+    } else {
+      navigate('/register');
     }
   };
 
@@ -61,7 +70,7 @@ const Login = () => {
         <div className='register'>
           <span className='registerText'>
             Haven't registered yet?{' '}
-            <a href='/register' className='registerHere'>
+            <a onClick={handleRegister} className='registerHere'>
               Register Here
             </a>
           </span>
