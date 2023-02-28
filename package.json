@@ -7,7 +7,7 @@
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
-    "build-client": "cd ./client && npm run build"
+    "build-client": "cd ./client && npm install && npm run build"
   },
   "keywords": [],
   "author": "",
