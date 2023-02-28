@@ -89,7 +89,11 @@ const Register = () => {
         <div className='logIn'>
           <span>
             Already have an account?{' '}
-            <a onClick={handleLogIn} className='signInHere'>
+            <a
+              onClick={handleLogIn}
+              style={{ cursor: 'pointer' }}
+              className='signInHere'
+            >
               {' '}
               Sign in here
             </a>
