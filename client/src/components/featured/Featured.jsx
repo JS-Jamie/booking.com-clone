@@ -3,7 +3,7 @@ import './featured.css';
 
 const Featured = () => {
   const { data, loading, error } = useFetch(
-    '/hotels/countByCity?cities=Dublin,Truckee,South Lake Tahoe'
+    '/api/hotels/countByCity?cities=Dublin,Truckee,South Lake Tahoe'
   );
 
   return (
