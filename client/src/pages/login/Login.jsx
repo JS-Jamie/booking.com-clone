@@ -70,7 +70,11 @@ const Login = () => {
         <div className='register'>
           <span className='registerText'>
             Haven't registered yet?{' '}
-            <a onClick={handleRegister} className='registerHere'>
+            <a
+              onClick={handleRegister}
+              style={{ cursor: 'pointer' }}
+              className='registerHere'
+            >
               Register Here
             </a>
           </span>
