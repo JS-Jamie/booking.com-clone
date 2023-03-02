@@ -11,7 +11,7 @@
 ...
 
 
-### :computer: Tech/Framework Used
+### :computer: Tech/Framework/Libraries Used
 ...
 
 ### :page_with_curl: API Endpoints
