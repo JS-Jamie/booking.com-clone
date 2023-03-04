@@ -1,5 +1,5 @@
 # eBooking.com (Booking.com clone)
-A cloned Booking.com using MERN stack. Users search for accommodations by city, date, and room preferences. Filter by price, view room details, and log in to book.
+A cloned Booking.com using MERN stack. Users can search for accommodations by city, date, and room preferences. They can also filter the search results by price, view room details, and register/log in to book.
 
 Check out the website [**here**](https://ebookingcom-js-jamie.koyeb.app/) :)
 
