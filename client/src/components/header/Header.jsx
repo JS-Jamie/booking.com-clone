@@ -91,7 +91,11 @@ const Header = ({ type }) => {
               The joy of home anywhere in the world
             </h1>
             <p className='headerDesc'>Easy booking, easy living</p>
-            {!user && <button className='headerBtn'>Sign in / Register</button>}
+            {!user && (
+              <button href='/login' className='headerBtn'>
+                Sign in / Register
+              </button>
+            )}
 
             <div className='headerSearch'>
               <div className='headerSearchItem'>
