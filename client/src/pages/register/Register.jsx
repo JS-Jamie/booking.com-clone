@@ -27,7 +27,7 @@ const Register = () => {
     e.preventDefault();
     dispatch({ type: 'REGISTER_START' });
     try {
-      const res = await axios.post('/auth/register', {
+      const res = await axios.post('/api/auth/register', {
         username: credentials.username,
         email: credentials.email,
         password: credentials.password,
