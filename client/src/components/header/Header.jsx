@@ -39,6 +39,10 @@ const Header = ({ type }) => {
   const navigate = useNavigate();
   const { user } = useContext(AuthContext);
 
+  const handleRegister = () => {
+    navigate('/login');
+  };
+
   const handleOption = (name, operation) => {
     setOptions((prev) => {
       return {
@@ -92,7 +96,7 @@ const Header = ({ type }) => {
             </h1>
             <p className='headerDesc'>Easy booking, easy living</p>
             {!user && (
-              <button href='/login' className='headerBtn'>
+              <button onClick={handleRegister} className='headerBtn'>
                 Sign in / Register
               </button>
             )}
